@@ -2,5 +2,9 @@
 <h1>Kocham Moją Mysze </h1>
 <h2>Angular nawet spoko jest</h2>
 
+
+<p>{{ message }}</p>
+
 <app-navbar></app-navbar>
-<app-post [fromParent]="parmes"></app-post>
+<app-post [fromParent]="parmes" (messageEvent)="reciveMessage($event)"></app-post>
+<p>{{ fromChildOutput }}</p>
