@@ -10,6 +10,17 @@ export class AppComponent implements AfterViewInit {
   parmes:string = "Zło kutas i zniszczenie";
   message:string ="elo";
   fromChildOutput:string="";
+  message2: string = 'Msg from TypeScript';
+  imgUrl: string = 'https://www.rockitcoin.com/wp-content/uploads/2021/10/image1.jpeg';
+  bool: boolean = false;
+  buttonClick() {
+    console.log('Button works');
+  }
+
+  onKeyUp($event: KeyboardEvent){
+    if($event.keyCode == 13){console.log("Key pressed");
+    }
+  }
 
   @ViewChild(PostComponent) childComp!:PostComponent;
 
@@ -24,5 +35,7 @@ export class AppComponent implements AfterViewInit {
 
   reciveMessage($event: string){
     this.fromChildOutput = $event;
+
+   
   }
 }

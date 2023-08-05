@@ -8,3 +8,15 @@
 <app-navbar></app-navbar>
 <app-post [fromParent]="parmes" (messageEvent)="reciveMessage($event)"></app-post>
 <p>{{ fromChildOutput }}</p>
+
+<p>{{ message2 }}</p> 
+
+<img src="{{ imgUrl }}" alt="">
+
+<img [src]="imgUrl" alt="">
+
+<h1 [style.color]=" bool? 'red': 'green' ">Ty kurwo</h1>
+
+<button (click)="buttonClick()" >Click me</button>
+
+<input type="text" (keyup)="onKeyUp($event)" >
